@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">AV1Fase2</string>
+    <string-array name="spinner_options">
+        <item>Campus Universitário de Nova Xavantina</item>
+        <item>Campus Universitário de Nova Mutum</item>
+        <item>Campus Universitário de Pontes e Lacerda</item>
+        <item>Campus Universitário de Sinop</item>
+        <item>Campus Universitário de Cáceres "Jane Vanini"</item>
+        <item>Campus Universitário do Médio Araguaia "Dom Pedro Casadaliga"</item>
+        <item>Campus Universitário de Diamantino "Francisco Ferreira Mendes"</item>
+        <item>Campus Universitário de Tangara da Serra "Eugênio Carlos Stieler"</item>
+        <item>Campus Universitário de Alto Araguaia</item>
+        <item>Campus Universitário de Alta Floresta</item>
+        <item>Campus Universitário de Colíder "Vale do Teles Pires"</item>
+        <item>Campus Universitário de Juara</item>
+        <item>Campus Universitário de Barra do Bugres "Deputado Renê Barbour"</item>
+    </string-array>
 </resources>

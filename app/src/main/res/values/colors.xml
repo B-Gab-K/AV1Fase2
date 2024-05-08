@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="amareloClaro">#FAFFD2</color>
+    <color name="verde">#1D3B08</color>
+    <color name="azul">#001B3B</color>
+    <color name="azulClaro">#589DC0</color>
+    <color name="azulMaisClaro">#F1FAFF</color>
+    <color name="cinza">#7C7A80</color>
+    <color name="cinzaClaro">#E0E9EB</color>
+    <color name="gelo">#F7F7F7</color>
 </resources>
