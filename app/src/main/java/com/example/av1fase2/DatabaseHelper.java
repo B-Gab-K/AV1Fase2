@@ -63,7 +63,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(TABLE_NAME, null, COLUMN_ID + "=?", new String[]{String.valueOf(id)}, null, null, null);
         Aluno aluno = null;
         if (cursor != null && cursor.moveToFirst()) {
-            aluno = new Aluno();
+            aluno = new Aluno("Nome", "Email", "Telefone", "Campus", "Gênero");
             aluno.setId(cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID)));
             aluno.setNome(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_NOME)));
             aluno.setEmail(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_EMAIL)));
@@ -83,7 +83,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(selectQuery, null);
         if (cursor != null && cursor.moveToFirst()) {
             do {
-                Aluno aluno = new Aluno();
+                Aluno aluno = new Aluno("Nome", "Email", "Telefone", "Campus", "Gênero");
                 aluno.setId(cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID)));
                 aluno.setNome(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_NOME)));
                 aluno.setEmail(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_EMAIL)));

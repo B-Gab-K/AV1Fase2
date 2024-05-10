@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/labelNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Nome: "
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/listNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:padding="10dp"
+        app:layout_constraintStart_toEndOf="@id/labelNome"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/labelEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: "
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listNome"/>
+
+    <TextView
+        android:id="@+id/listEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:padding="10dp"
+        app:layout_constraintStart_toEndOf="@id/labelEmail"
+        app:layout_constraintTop_toBottomOf="@id/listNome"/>
+
+    <TextView
+        android:id="@+id/labelTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefone: "
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listEmail"/>
+
+    <TextView
+        android:id="@+id/listTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:padding="10dp"
+        app:layout_constraintStart_toEndOf="@id/labelTelefone"
+        app:layout_constraintTop_toBottomOf="@id/listEmail"/>
+
+    <TextView
+        android:id="@+id/labelCampus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Campus: "
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listTelefone"/>
+
+    <TextView
+        android:id="@+id/listCampus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:padding="10dp"
+        app:layout_constraintStart_toEndOf="@id/labelCampus"
+        app:layout_constraintTop_toBottomOf="@id/listTelefone"/>
+
+    <TextView
+        android:id="@+id/labelGenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gênero: "
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listCampus"/>
+
+    <TextView
+        android:id="@+id/listGenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:padding="10dp"
+        app:layout_constraintStart_toEndOf="@id/labelGenero"
+        app:layout_constraintTop_toBottomOf="@id/listCampus"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="___________________________________________________"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listGenero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="HardcodedText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

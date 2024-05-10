@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gelo"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -96,47 +97,29 @@
             style="@style/SpinnerTextStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/telefone"/>
+            app:layout_constraintTop_toBottomOf="@id/telefone"
+            tools:targetApi="o" />
 
 
-        <Button
-            android:id="@+id/btnData"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/button_default_background"
-            android:text="Data de Nascimento"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/campus"
-            tools:ignore="HardcodedText" />
-
-
-        <TextView
-            android:id="@+id/dataSelecionada"
+        <RadioButton
+            android:id="@+id/generoM"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Data Selecionada: DD/MM/AAAA"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            app:layout_constraintTop_toBottomOf="@id/btnData"
-            app:layout_constraintStart_toStartOf="@id/btnData"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Masculino"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/campus"
+            app:layout_constraintTop_toBottomOf="@+id/campus"
             tools:ignore="HardcodedText" />
 
-
-        <DatePicker
-            android:id="@+id/pegarData"
-            android:layout_width="match_parent"
+        <RadioButton
+            android:id="@+id/generoF"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:calendarViewShown="false"
-            android:datePickerMode="spinner"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/dataSelecionada"/>
+            android:text="Feminino"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/generoM"
+            app:layout_constraintTop_toBottomOf="@+id/campus"
+            tools:ignore="HardcodedText" />
 
 
         <Button
@@ -147,74 +130,39 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
             android:text="INSERIR"
-            app:layout_constraintEnd_toStartOf="@+id/btnConsultar"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pegarData"
-            tools:ignore="HardcodedText" />
-
-        <Button
-            android:id="@+id/btnConsultar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:text="CONSULTAR"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnInserir"
-            app:layout_constraintTop_toBottomOf="@+id/pegarData"
+            app:layout_constraintTop_toBottomOf="@+id/generoF"
             tools:ignore="HardcodedText" />
 
-        <!-- Novo EditText para busca -->
-        <!-- Outros componentes omitidos para simplificação -->
 
-        <EditText
-            android:id="@+id/searchName"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:background="#30ffffff"
-            android:hint="Buscar por Nome"
-            android:inputType="text"
-            android:padding="20dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            app:layout_constraintEnd_toStartOf="@+id/btnBuscar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnConsultar"
-            app:layout_constraintWidth_default="wrap"
-            android:autofillHints=""
-            tools:ignore="HardcodedText" />
-
-        <Button
-            android:id="@+id/btnBuscar"
+        <TextView
+            android:id="@+id/tabela"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            android:text="BUSCAR"
+            android:text="Tabela"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/searchName"
-            app:layout_constraintTop_toBottomOf="@+id/btnConsultar"
-            app:layout_constraintWidth_default="wrap"
-            tools:ignore="HardcodedText" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnInserir"
+            app:layout_constraintVertical_bias="0.100000024" />
 
 
         <ListView
-            android:id="@+id/listViewUsers"
+            android:id="@+id/listViewAlunos"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="32dp"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnBuscar"
-            tools:ignore="NestedScrolling" />
+            app:layout_constraintTop_toBottomOf="@+id/tabela" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -7,10 +7,7 @@ public class Aluno {
     private String telefone;
     private String campus;
     private String genero;
-
-    public Aluno() {
-    }
-
+    
     public Aluno(String nome, String email, String telefone, String campus, String genero) {
         this.nome = nome;
         this.email = email;
